@@ -88,6 +88,11 @@
   width: 370px;
   height: 370px;
   border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(124, 58, 237, 0.16),
+    transparent 68%
+  );
 }
 
 .journey-image::after {
@@ -96,6 +101,7 @@
   width: 285px;
   height: 285px;
   border-radius: 50%;
+  border: 1px solid rgba(168, 85, 247, 0.1);
 }
 
 .journey-image img {
@@ -107,104 +113,6 @@
   z-index: 2;
   display: block;
 }
-
-@media (max-width: 1100px) {
-  .experience-hero {
-    width: 92%;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-  }
-
-  .experience-content h1 {
-    font-size: 44px;
-  }
-
-  .journey-image img {
-    max-width: 480px;
-  }
-
-  .journey-image::before {
-    width: 330px;
-    height: 330px;
-  }
-
-  .journey-image::after {
-    width: 250px;
-    height: 250px;
-  }
-}
-
-@media (max-width: 800px) {
-  .experience-hero {
-    width: 90%;
-    grid-template-columns: 1fr;
-    min-height: auto;
-    padding: 60px 0;
-    margin-top: 25px;
-  }
-
-  .experience-content {
-    padding-left: 5px;
-  }
-
-  .experience-content h1 {
-    font-size: 42px;
-  }
-
-  .experience-content p {
-    font-size: 8px;
-  }
-
-  .journey-image {
-    min-height: 350px;
-    margin-top: 20px;
-  }
-
-  .journey-image img {
-    max-width: 520px;
-  }
-}
-
-@media (max-width: 550px) {
-  .experience-hero {
-    width: 90%;
-    padding: 45px 0;
-  }
-
-  .experience-content h1 {
-    font-size: 35px;
-    letter-spacing: -1px;
-  }
-
-  .experience-content p {
-    font-size: 8px;
-    line-height: 1.7;
-  }
-
-  .experience-content p br {
-    display: none;
-  }
-
-  .journey-image {
-    min-height: 270px;
-  }
-
-  .journey-image::before {
-    width: 240px;
-    height: 240px;
-  }
-
-  .journey-image::after {
-    width: 185px;
-    height: 185px;
-  }
-
-  .journey-image img {
-    max-width: 400px;
-  }
-}
-
-
 
 .timeline-section {
   width: 90%;
@@ -220,15 +128,11 @@
   top: 0;
   bottom: 0;
   width: 3px;
-
   background: #a855f7;
-
   transform: translateX(-50%);
-
   box-shadow:
     0 0 6px #a855f7,
     0 0 15px rgba(168, 85, 247, 0.6);
-
   z-index: 1;
 }
 
@@ -271,7 +175,6 @@
   box-shadow:
     0 8px 25px rgba(0, 0, 0, 0.3),
     inset 0 0 25px rgba(124, 58, 237, 0.04);
-
   transition: 0.3s ease;
 }
 
@@ -331,81 +234,8 @@
   box-shadow:
     0 0 8px #a855f7,
     0 0 18px rgba(168, 85, 247, 0.7);
-
   z-index: 5;
 }
-
-
-@media (max-width: 800px) {
-
-  .timeline-section {
-    width: 92%;
-    margin-top: 30px;
-  }
-
-  .timeline-line {
-    left: 15px;
-  }
-
-  .timeline-item.left,
-  .timeline-item.right {
-    justify-content: flex-start;
-
-    padding-left: 40px;
-    padding-right: 0;
-  }
-
-  .timeline-card {
-    width: calc(100% - 5px);
-    max-width: 430px;
-  }
-
-  .timeline-dot {
-    left: 15px;
-  }
-}
-
-
-
-@media (max-width: 550px) {
-
-  .timeline-section {
-    width: 90%;
-    margin-bottom: 80px;
-  }
-
-  .timeline-item {
-    min-height: 110px;
-    margin-bottom: 25px;
-  }
-
-  .timeline-card {
-    min-height: 88px;
-
-    padding: 10px;
-
-    gap: 9px;
-  }
-
-  .timeline-icon {
-    width: 24px;
-    height: 24px;
-    min-width: 24px;
-
-    font-size: 11px;
-  }
-
-  .timeline-year {
-    font-size: 8px;
-  }
-
-  .timeline-card li {
-    font-size: 6px;
-  }
-}
-
-
-
 
 .learning-section {
   width: 100%;
@@ -457,7 +287,7 @@
 
 .learning-card {
   min-height: 150px;
-  padding: 9px 8px;
+  padding: 12px;
   box-sizing: border-box;
   text-align: center;
   background: linear-gradient(
@@ -465,23 +295,17 @@
     rgba(25, 25, 42, 0.95),
     rgba(10, 10, 20, 0.98)
   );
-
   border: 1px solid rgba(255, 255, 255, 0.12);
-
   border-radius: 6px;
-
   box-shadow:
     inset 0 0 20px rgba(124, 58, 237, 0.04),
     0 5px 15px rgba(0, 0, 0, 0.25);
-
   transition: 0.3s ease;
 }
 
 .learning-card:hover {
   transform: translateY(-4px);
-
   border-color: rgba(168, 85, 247, 0.55);
-
   box-shadow:
     0 8px 25px rgba(0, 0, 0, 0.35),
     0 0 15px rgba(124, 58, 237, 0.12);
@@ -504,7 +328,7 @@
 }
 
 .learning-card h3 {
-  margin: 0 0 4px;
+  margin: 0 0 6px;
   font-size: 15px;
   font-weight: 600;
   color: #ffffff;
@@ -513,55 +337,41 @@
 .learning-card p {
   margin: 0;
   color: #777787;
-  font-size: 13px;
+  font-size: 10px;
   line-height: 1.5;
 }
 
-
 .milestone-grid {
   display: grid;
-
   grid-template-columns: repeat(4, 1fr);
-
   gap: 6px;
 }
 
 .milestone-card {
   min-height: 62px;
-
   padding: 7px;
-
   box-sizing: border-box;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   text-align: center;
-
   background: linear-gradient(
     145deg,
     rgba(25, 25, 42, 0.95),
     rgba(10, 10, 20, 0.98)
   );
-
   border: 1px solid rgba(255, 255, 255, 0.12);
-
   border-radius: 6px;
-
   box-shadow:
     inset 0 0 20px rgba(124, 58, 237, 0.04),
     0 5px 15px rgba(0, 0, 0, 0.25);
-
   transition: 0.3s ease;
 }
 
 .milestone-card:hover {
   transform: translateY(-4px);
-
   border-color: rgba(168, 85, 247, 0.55);
-
   box-shadow:
     0 8px 25px rgba(0, 0, 0, 0.35),
     0 0 15px rgba(124, 58, 237, 0.12);
@@ -569,70 +379,50 @@
 
 .milestone-icon {
   color: #a855f7;
-
   font-size: 13px;
-
   margin-bottom: 3px;
-
   text-shadow:
     0 0 10px rgba(168, 85, 247, 0.7);
 }
 
 .milestone-card strong {
   color: #ffffff;
-
   font-size: 11px;
-
   font-weight: 600;
 }
 
 .milestone-card span {
   margin-top: 2px;
-
   color: #777787;
-
   font-size: 5.5px;
 }
 
-
 .current-learning {
   display: grid;
-
   grid-template-columns: repeat(5, 1fr);
-
   gap: 6px;
 }
 
 .current-card {
   min-height: 43px;
-
   padding: 6px 7px;
-
   box-sizing: border-box;
-
   display: flex;
   align-items: center;
-
   gap: 7px;
-
   background: linear-gradient(
     145deg,
     rgba(25, 25, 42, 0.95),
     rgba(10, 10, 20, 0.98)
   );
-
   border: 1px solid rgba(255, 255, 255, 0.12);
-
   border-radius: 5px;
-
   transition: 0.3s ease;
 }
 
 .current-card:hover {
   transform: translateY(-3px);
-
   border-color: rgba(168, 85, 247, 0.55);
-
   box-shadow:
     0 0 15px rgba(124, 58, 237, 0.1);
 }
@@ -640,111 +430,43 @@
 .current-icon {
   width: 21px;
   height: 21px;
-
   min-width: 21px;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   border-radius: 4px;
-
   color: #a855f7;
-
   background: rgba(124, 58, 237, 0.12);
-
   border: 1px solid rgba(168, 85, 247, 0.25);
-
   font-size: 7px;
-
   box-shadow:
     0 0 10px rgba(124, 58, 237, 0.15);
 }
 
 .current-card span {
   color: #858592;
-
   font-size: 5.5px;
-
   line-height: 1.3;
 }
-
-
-
-@media (max-width: 800px) {
-
-  .learning-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .milestone-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .current-learning {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-}
-
-
-@media (max-width: 550px) {
-
-  .learning-section {
-    width: 90%;
-    margin-bottom: 80px;
-  }
-
-  .learning-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 5px;
-  }
-
-  .learning-card {
-    min-height: 90px;
-  }
-
-  .milestone-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 5px;
-  }
-
-  .current-learning {
-    grid-template-columns: 1fr;
-    gap: 5px;
-  }
-
-  .current-card {
-    min-height: 42px;
-  }
-
-}
-
-
 
 .experience-cta {
   width: 90%;
   max-width: 1200px;
   height: 150px;
   margin: 20px auto 12px;
-
   position: relative;
   overflow: hidden;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   border: 1px solid rgba(168, 85, 247, 0.45);
   border-radius: 10px;
-
   background:
     linear-gradient(
       135deg,
       rgba(40, 10, 75, 0.9),
       rgba(11, 7, 28, 0.98)
     );
-
   box-shadow:
     inset 0 0 35px rgba(124, 58, 237, 0.12),
     0 0 25px rgba(124, 58, 237, 0.08);
@@ -752,10 +474,8 @@
 
 .experience-cta::before {
   content: "";
-
   position: absolute;
   inset: 0;
-
   background:
     repeating-radial-gradient(
       ellipse at 10% 100%,
@@ -764,45 +484,32 @@
       rgba(168, 85, 247, 0.08) 17px,
       transparent 18px
     );
-
   opacity: 0.5;
 }
 
 .experience-cta::after {
   content: "";
-
   position: absolute;
-
   width: 260px;
   height: 260px;
-
   right: -70px;
   top: -110px;
-
   border: 1px solid rgba(168, 85, 247, 0.25);
   border-radius: 50%;
-
   box-shadow:
     0 0 25px rgba(168, 85, 247, 0.12);
 }
 
 .cta-glow {
   position: absolute;
-
   width: 180px;
   height: 100px;
-
   left: 50%;
   top: 50%;
-
   transform: translate(-50%, -50%);
-
   background: #7c3aed;
-
   opacity: 0.13;
-
   filter: blur(45px);
-
   border-radius: 50%;
 }
 
@@ -824,25 +531,25 @@
   color: #a855f7;
   text-shadow:
     0 0 12px rgba(168, 85, 247, 0.45);
-    font-size: 13px;
+  font-size: inherit;
 }
 
 .cta-content p {
   margin: 5px 0 10px;
   color: #b0afbd;
-  font-size: 12px;
+  font-size: 10px;
 }
 
 .cta-button {
-  width: 110px;
+  width: 115px;
   height: 28px;
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 11px;
+  gap: 10px;
   color: white;
-  font-size: 12px;
+  font-size: 7px;
   font-weight: 500;
   text-decoration: none;
   border-radius: 20px;
@@ -851,15 +558,13 @@
     #9333ea,
     #a855f7
   );
-
   box-shadow:
     0 0 15px rgba(168, 85, 247, 0.4);
-
   transition: 0.3s ease;
 }
 
 .cta-button span {
-  font-size: 15px;
+  font-size: 11px;
   transition: 0.3s ease;
 }
 
@@ -873,8 +578,6 @@
   transform: translateX(4px);
 }
 
-
-
 .experience-footer {
   width: 100%;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
@@ -884,7 +587,6 @@
       #070714,
       #05050d
     );
-
   color: white;
 }
 
@@ -899,8 +601,6 @@
   gap: 40px;
   box-sizing: border-box;
 }
-
-
 
 .footer-brand h2 {
   margin: 0;
@@ -940,7 +640,7 @@
   border: 1px solid rgba(255, 255, 255, 0.15);
   color: #a0a0ad;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 8px;
   transition: 0.3s ease;
 }
 
@@ -957,20 +657,18 @@
   object-fit: contain;
 }
 
-
-
 .footer-navigation h3,
 .footer-connect h3 {
   margin: 0 0 7px;
   color: white;
-  font-size: 13px;
+  font-size: 8px;
   font-weight: 600;
 }
 
 .footer-links {
   display: flex;
   gap: 35px;
-    margin-left: 100px;
+  margin-left: 0;
 }
 
 .footer-links div {
@@ -981,7 +679,7 @@
 
 .footer-links a {
   color: #777784;
-  font-size: 13px;
+  font-size: 6px;
   text-decoration: none;
   transition: 0.25s ease;
 }
@@ -994,12 +692,10 @@
   color: #a855f7;
 }
 
-
-
 .footer-connect p {
   margin: 0 0 7px;
   color: #777784;
-  font-size: 10px;
+  font-size: 7px;
   line-height: 1.5;
 }
 
@@ -1008,22 +704,19 @@
   align-items: center;
   gap: 6px;
   color: #777784;
-  font-size: 12px;
+  font-size: 6px;
   text-decoration: none;
   transition: 0.25s ease;
 }
 
 .footer-email span {
   color: #a855f7;
-
   font-size: 11px;
 }
 
 .footer-email:hover {
   color: #a855f7;
 }
-
-
 
 .footer-bottom {
   width: 100%;
@@ -1066,28 +759,242 @@
   border-color: #a855f7;
 }
 
+@media (max-width: 1100px) {
+  .experience-hero {
+    width: 92%;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
 
+  .experience-content h1 {
+    font-size: 44px;
+  }
 
-@media (max-width: 800px) {
+  .journey-image img {
+    max-width: 470px;
+  }
 
-  .experience-cta {
-    height: 120px;
+  .journey-image::before {
+    width: 320px;
+    height: 320px;
+  }
+
+  .journey-image::after {
+    width: 245px;
+    height: 245px;
+  }
+
+  .timeline-card {
+    width: 340px;
+  }
+
+  .learning-section,
+  .footer-main {
+    width: 92%;
+  }
+}
+
+@media (max-width: 900px) {
+  .learning-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .milestone-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .current-learning {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .footer-main {
     grid-template-columns: 1fr 1fr;
-
     gap: 25px;
   }
 
   .footer-connect {
     grid-column: 1 / -1;
   }
-
 }
 
+@media (max-width: 800px) {
+  .experience-hero {
+    width: 90%;
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding: 60px 0;
+    margin-top: 25px;
+    text-align: center;
+  }
 
-@media (max-width: 550px) {
+  .experience-content {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .journey-label {
+    font-size: 11px;
+  }
+
+  .experience-content h1 {
+    font-size: 42px;
+  }
+
+  .experience-content p {
+    font-size: 9px;
+  }
+
+  .journey-line {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .journey-image {
+    min-height: 350px;
+    margin-top: 20px;
+  }
+
+  .journey-image img {
+    max-width: 520px;
+    width: 90%;
+  }
+
+  .timeline-section {
+    width: 92%;
+    margin-top: 30px;
+  }
+
+  .timeline-line {
+    left: 15px;
+  }
+
+  .timeline-item.left,
+  .timeline-item.right {
+    justify-content: flex-start;
+    padding-left: 40px;
+    padding-right: 0;
+  }
+
+  .timeline-card {
+    width: calc(100% - 5px);
+    max-width: 430px;
+  }
+
+  .timeline-dot {
+    left: 15px;
+  }
+
+  .learning-section {
+    width: 92%;
+  }
+
+  .experience-cta {
+    width: 92%;
+    height: 125px;
+  }
+}
+
+@media (max-width: 650px) {
+  .experience-hero {
+    width: 90%;
+    padding: 45px 0;
+  }
+
+  .experience-content h1 {
+    font-size: 35px;
+    letter-spacing: -1px;
+  }
+
+  .experience-content p {
+    font-size: 8px;
+    line-height: 1.7;
+  }
+
+  .experience-content p br {
+    display: none;
+  }
+
+  .journey-image {
+    min-height: 270px;
+  }
+
+  .journey-image::before {
+    width: 240px;
+    height: 240px;
+  }
+
+  .journey-image::after {
+    width: 185px;
+    height: 185px;
+  }
+
+  .journey-image img {
+    max-width: 400px;
+  }
+
+  .timeline-section {
+    width: 90%;
+    margin-bottom: 80px;
+  }
+
+  .timeline-item {
+    min-height: 110px;
+    margin-bottom: 25px;
+  }
+
+  .timeline-card {
+    min-height: 88px;
+    padding: 10px;
+    gap: 9px;
+  }
+
+  .timeline-icon {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    font-size: 11px;
+  }
+
+  .timeline-year {
+    font-size: 8px;
+  }
+
+  .timeline-card li {
+    font-size: 6px;
+  }
+
+  .learning-section {
+    width: 90%;
+    margin-bottom: 80px;
+  }
+
+  .learning-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+  }
+
+  .learning-card {
+    min-height: 100px;
+    padding: 10px;
+  }
+
+  .learning-card h3 {
+    font-size: 9px;
+  }
+
+  .learning-card p {
+    font-size: 6.5px;
+  }
+
+  .milestone-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+  }
+
+  .current-learning {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
 
   .experience-cta {
     width: 90%;
@@ -1104,9 +1011,7 @@
 
   .footer-main {
     width: 90%;
-
     grid-template-columns: 1fr 1fr;
-
     gap: 20px;
   }
 
@@ -1122,9 +1027,130 @@
   .footer-links {
     gap: 20px;
   }
+}
 
-  .footer-bottom {
-    padding: 5px 15px;
+@media (max-width: 450px) {
+  .experience-content h1 {
+    font-size: 30px;
   }
 
+  .experience-content p {
+    font-size: 7px;
+  }
+
+  .journey-image {
+    min-height: 230px;
+  }
+
+  .journey-image::before {
+    width: 210px;
+    height: 210px;
+  }
+
+  .journey-image::after {
+    width: 160px;
+    height: 160px;
+  }
+
+  .timeline-section {
+    width: 90%;
+  }
+
+  .timeline-item.left,
+  .timeline-item.right {
+    padding-left: 32px;
+  }
+
+  .timeline-line,
+  .timeline-dot {
+    left: 10px;
+  }
+
+  .timeline-card {
+    width: 100%;
+    padding: 9px;
+    gap: 7px;
+  }
+
+  .timeline-icon {
+    width: 22px;
+    height: 22px;
+    min-width: 22px;
+  }
+
+  .timeline-year {
+    font-size: 7.5px;
+  }
+
+  .timeline-card li {
+    font-size: 5.8px;
+  }
+
+  .learning-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .learning-card {
+    min-height: 90px;
+  }
+
+  .milestone-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .current-learning {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-cta {
+    height: 120px;
+  }
+
+  .cta-content h2 {
+    font-size: 15px;
+  }
+
+  .cta-content p {
+    font-size: 6.5px;
+  }
+
+  .cta-button {
+    width: 105px;
+    height: 25px;
+    font-size: 6px;
+  }
+
+  .footer-main {
+    width: 92%;
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .footer-brand,
+  .footer-navigation,
+  .footer-connect {
+    grid-column: auto;
+  }
+
+  .footer-brand h2 {
+    font-size: 20px;
+  }
+
+  .footer-brand p {
+    font-size: 8px;
+  }
+
+  .footer-links {
+    margin-left: 0;
+  }
+
+  .footer-bottom {
+    padding: 6px 12px;
+    gap: 10px;
+  }
+
+  .footer-bottom p,
+  .back-top {
+    font-size: 5px;
+  }
 }

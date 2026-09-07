@@ -4,7 +4,13 @@
   box-sizing: border-box;
 }
 
-html,
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
 body,
 #root {
   width: 100%;
@@ -14,6 +20,17 @@ body,
 
 body {
   overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input,
+textarea {
+  max-width: 100%;
 }
 
 .Navbar {
@@ -40,42 +57,7 @@ body {
   font-size: 25px;
   font-weight: 700;
   cursor: pointer;
-}
-
-.hero {
-  width: 1200px;
-  margin: 0 auto;
-  padding-top: 60px;
-  box-sizing: border-box;
-}
-
-.hero-title {
-  margin-left: 0;
-  text-align: left;
-  color: white;
-}
-
-.hero-name {
-  margin-left: 5px;
-  text-align: left;
-  color: #a855f7;
-  text-shadow: 0 0 10px #a855f7;
-}
-
-.hero-id{
-  margin-left: 180px;
-  text-align: left;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  color: white;
-}
-
-.hero-ids {
-  margin-left: 20px;
-  text-align: left;
-  margin-top: 30px;
-  margin-bottom: 20px;
-  color: white;
+  white-space: nowrap;
 }
 
 .Nav-links {
@@ -101,6 +83,13 @@ body {
   text-shadow: 0 0 10px #a855f7;
 }
 
+.hero {
+  width: 1200px;
+  max-width: 90%;
+  margin: 0 auto;
+  padding-top: 60px;
+}
+
 .hero-title {
   margin-left: 0;
   text-align: left;
@@ -114,7 +103,7 @@ body {
   text-shadow: 0 0 8px #a855f7;
 }
 
-.hero-id{
+.hero-id {
   margin-left: 180px;
   text-align: left;
   margin-top: 20px;
@@ -181,15 +170,22 @@ body {
   margin-bottom: 20px;
 }
 
-.connect{
+.connect {
   display: flex;
-  top:10px;
+  top: 10px;
   gap: 20px;
   justify-content: flex-start;
   margin-left: 0;
+  flex-wrap: wrap;
 }
 
-.connect img{
+.connect a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.connect img {
   width: 50px;
   height: 50px;
   border-radius: 10px;
@@ -210,7 +206,6 @@ body {
   align-items: center;
   gap: 50px;
 }
-
 
 .about-text {
   text-align: left;
@@ -245,8 +240,8 @@ body {
   border-radius: 8px;
 }
 
-.about-btn:hover{
-    background-color: white;
+.about-btn:hover {
+  background-color: white;
   color: #a855f7;
 }
 
@@ -275,12 +270,10 @@ body {
   color: #ccc;
 }
 
-
-
 .skill {
   width: 90%;
   min-height: 200px;
- margin: 60px auto;
+  margin: 60px auto;
   padding: 25px;
   background-color: #000;
   color: white;
@@ -328,6 +321,7 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 30px;
+  flex-wrap: wrap;
 }
 
 .skills {
@@ -338,7 +332,6 @@ body {
   align-items: center;
   text-align: center;
 }
-
 
 .skills img {
   width: 50px;
@@ -354,7 +347,6 @@ body {
   font-size: 12px;
   white-space: nowrap;
 }
-
 
 .projects {
   width: 90%;
@@ -456,7 +448,6 @@ body {
   font-size: 10px;
 }
 
-
 .project-links {
   display: flex;
   gap: 15px;
@@ -478,7 +469,6 @@ body {
 .project-links .live {
   color: #a855f7;
 }
-
 
 .experience-section {
   width: 90%;
@@ -514,14 +504,13 @@ body {
   font-size: 20px;
 }
 
-
 .timeline {
   position: relative;
   width: 100%;
   min-height: 170px;
   padding: 35px 30px 20px;
   background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 15px;
 }
 
@@ -587,7 +576,7 @@ body {
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 15px;
 }
 
@@ -622,17 +611,12 @@ body {
   margin-top: 3px;
 }
 
-
-
-
 .what-i-do {
   width: 100%;
   padding: 40px 5%;
   background: #000;
   color: white;
-  box-sizing: border-box;
 }
-
 
 .what-header {
   display: grid;
@@ -709,7 +693,6 @@ body {
   transform: translateY(-3px);
 }
 
-
 .what-cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -721,7 +704,6 @@ body {
   padding: 20px;
   border: 1px solid #292b3a;
   border-radius: 15px;
-
   background:
     radial-gradient(
       circle at 50% 100%,
@@ -729,10 +711,8 @@ body {
       transparent 45%
     ),
     #080910;
-
   box-shadow:
     inset 0 0 25px rgba(130, 40, 220, 0.04);
-
   transition: 0.35s ease;
 }
 
@@ -742,8 +722,6 @@ body {
   box-shadow:
     0 15px 35px rgba(130, 40, 220, 0.15);
 }
-
-
 
 .card-top {
   display: flex;
@@ -762,27 +740,21 @@ body {
   height: 40px;
   border: 1px solid #303141;
   border-radius: 50%;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   color: #a855f7;
   font-size: 25px;
 }
-
-
 
 .card-icon {
   color: #a855f7;
   font-size: 55px;
   margin: 15px 0 10px;
   height: 65px;
-
   display: flex;
   align-items: center;
 }
-
 
 .what-card h3 {
   font-size: 17px;
@@ -796,16 +768,12 @@ body {
   min-height: 65px;
 }
 
-
-
 .card-line {
   width: 27px;
   height: 2px;
   background: #a855f7;
   margin: 12px 0 20px;
 }
-
-
 
 .tech-tags {
   display: flex;
@@ -816,56 +784,11 @@ body {
 .tech-tags span {
   border: 1px solid #292c3b;
   background: rgba(20, 21, 31, 0.8);
-
   padding: 8px 11px;
   border-radius: 7px;
-
   color: #d0d0d5;
   font-size: 11px;
 }
-
-
-@media (max-width: 1000px) {
-
-  .what-header {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .what-view-btn {
-    width: 100px;
-  }
-
-  .what-cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-
-@media (max-width: 650px) {
-
-  .what-i-do {
-    padding: 60px 5%;
-  }
-
-  .what-header {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-
-  .what-title h2 {
-    font-size: 26px;
-  }
-
-  .what-cards {
-    grid-template-columns: 1fr;
-  }
-
-  .what-card {
-    min-height: auto;
-  }
-}
-
-
 
 .contact-section {
   position: relative;
@@ -879,7 +802,6 @@ body {
   color: white;
   overflow: hidden;
 }
-
 
 .contact-left {
   position: relative;
@@ -906,7 +828,6 @@ body {
   line-height: 1.6;
   margin-bottom: 18px;
 }
-
 
 .contact-info {
   display: flex;
@@ -944,8 +865,6 @@ body {
   font-size: 15px;
 }
 
-
-
 .contact-socials {
   display: flex;
   align-items: center;
@@ -958,7 +877,6 @@ body {
   color: #bdbdc4;
   font-size: 15px;
 }
-
 
 .contact-right {
   position: relative;
@@ -1005,7 +923,6 @@ body {
   margin-top: 10px;
 }
 
-
 .contact-right button {
   margin-top: 14px;
   border: none;
@@ -1017,7 +934,6 @@ body {
   font-weight: 600;
   cursor: pointer;
 }
-
 
 .contact-lines {
   position: absolute;
@@ -1034,35 +950,578 @@ body {
       #8738d8 8px,
       transparent 10px
     );
-
   transform: rotate(-25deg);
   pointer-events: none;
 }
 
+@media (max-width: 1000px) {
+  .Navbar {
+    padding: 0 25px;
+  }
 
+  .Nav-links {
+    gap: 22px;
+  }
+
+  .hero {
+    width: 90%;
+  }
+
+  .home {
+    width: 520px;
+    right: 20px;
+  }
+
+  .project-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .what-header {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .what-view-btn {
+    width: 100px;
+  }
+
+  .what-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-section {
+    gap: 40px;
+  }
+}
 
 @media (max-width: 800px) {
+  .Navbar {
+    width: 94%;
+    height: auto;
+    min-height: 65px;
+    padding: 15px 20px;
+    flex-direction: column;
+    gap: 13px;
+    border-radius: 24px;
+  }
+
+  .Name {
+    font-size: 21px;
+  }
+
+  .Nav-links {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+  }
+
+  .Nav-links a {
+    font-size: 11px;
+  }
+
+  .hero {
+    width: 92%;
+    max-width: 100%;
+    padding-top: 35px;
+    min-height: auto;
+  }
+
+  .hero-title,
+  .hero-name,
+  .hero-id,
+  .hero-ids {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .hero-id {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .hero-ids {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .hero-btn,
+  .hero-btns {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .home {
+    position: relative;
+    width: 80%;
+    right: auto;
+    top: auto;
+    display: block;
+    margin: 35px auto 0;
+  }
+
+  .ct {
+    text-align: center;
+  }
+
+  .connect {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .connect img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .abh {
+    width: 92%;
+    margin: 70px auto 0;
+    padding: 20px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 30px;
+  }
+
+  .about-text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .about-text h2 {
+    font-size: 28px;
+  }
+
+  .about-boxes {
+    width: 100%;
+  }
+
+  .skill {
+    width: 92%;
+    margin: 40px auto;
+    padding: 20px;
+  }
+
+  .skills-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .skills-list {
+    justify-content: center;
+    gap: 25px;
+  }
+
+  .projects {
+    width: 92%;
+    margin: 30px auto;
+  }
+
+  .projects-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .projects-header span {
+    margin-left: 0;
+  }
+
+  .projects-header h2 {
+    margin-left: 0;
+  }
+
+  .project-list {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-section {
+    width: 92%;
+  }
+
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .experience-header span {
+    margin-left: 0;
+  }
+
+  .experience-header h2 {
+    margin-left: 0;
+  }
+
+  .timeline {
+    padding: 30px 15px 20px;
+    overflow: hidden;
+  }
+
+  .timeline-line {
+    top: 20px;
+    left: 20px;
+    width: calc(100% - 40px);
+  }
+
+  .journey {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px 15px;
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .what-i-do {
+    padding: 50px 5%;
+  }
+
+  .what-header {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .what-description p {
+    margin-top: 0;
+  }
+
+  .what-view-btn {
+    width: 110px;
+  }
+
+  .what-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .what-card {
+    min-height: auto;
+  }
 
   .contact-section {
     grid-template-columns: 1fr;
     gap: 35px;
+    width: 92%;
+  }
+
+  .contact-left {
+    text-align: center;
+  }
+
+  .contact-info {
+    align-items: center;
+  }
+
+  .contact-socials {
+    justify-content: center;
+  }
+
+  .contact-right input,
+  .contact-right textarea {
+    margin-top: 10px;
   }
 
   .contact-lines {
     right: -100px;
   }
-
 }
 
+@media (max-width: 650px) {
+  .Navbar {
+    width: 94%;
+    padding: 14px 15px;
+  }
 
-@media (max-width: 500px) {
+  .Name {
+    font-size: 19px;
+  }
+
+  .Nav-links {
+    gap: 8px 13px;
+  }
+
+  .Nav-links a {
+    font-size: 9px;
+  }
+
+  .hero {
+    width: 92%;
+    padding-top: 25px;
+  }
+
+  .hero-name {
+    font-size: 27px;
+  }
+
+  .hero-btn,
+  .hero-btns {
+    padding: 10px 15px;
+    font-size: 11px;
+  }
+
+  .home {
+    width: 90%;
+  }
+
+  .about-text h2 {
+    font-size: 24px;
+  }
+
+  .about-text p {
+    font-size: 13px;
+  }
+
+  .about-boxes {
+    grid-template-columns: 1fr;
+  }
+
+  .about-box {
+    min-height: auto;
+  }
+
+  .skills-list {
+    gap: 20px;
+  }
+
+  .skills {
+    width: 70px;
+    min-width: 70px;
+  }
+
+  .skills img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .skills p {
+    font-size: 10px;
+    white-space: normal;
+  }
+
+  .projects-header h2,
+  .experience-header h2 {
+    font-size: 22px;
+  }
+
+  .journey {
+    grid-template-columns: 1fr;
+  }
+
+  .journey-item p {
+    max-width: 250px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .stat {
+    justify-content: flex-start;
+  }
+
+  .what-title h2 {
+    font-size: 26px;
+  }
+
+  .what-small,
+  .what-description p {
+    font-size: 12px;
+  }
+
+  .what-card {
+    padding: 18px;
+  }
+
+  .what-card h3 {
+    font-size: 16px;
+  }
+
+  .what-card > p {
+    font-size: 12px;
+  }
+
+  .tech-tags span {
+    font-size: 10px;
+  }
+
+  .contact-section {
+    width: 92%;
+    margin-top: 50px;
+  }
+
+  .contact-label {
+    font-size: 16px;
+  }
+
+  .contact-left h2 {
+    font-size: 22px;
+  }
+
+  .contact-left > p {
+    font-size: 11px;
+  }
+
+  .contact-info a {
+    font-size: 10px;
+  }
+
+  .contact-info p {
+    font-size: 12px;
+  }
 
   .form-row {
     grid-template-columns: 1fr;
   }
+}
 
-  .contact-section {
-    width: 88%;
+@media (max-width: 500px) {
+  .Navbar {
+    width: 95%;
+    padding: 12px;
+    border-radius: 20px;
   }
 
+  .Name {
+    font-size: 18px;
+  }
+
+  .Nav-links {
+    gap: 7px 10px;
+  }
+
+  .Nav-links a {
+    font-size: 8px;
+  }
+
+  .hero-name {
+    font-size: 23px;
+  }
+
+  .hero-id,
+  .hero-ids {
+    font-size: 12px;
+  }
+
+  .hero-btn,
+  .hero-btns {
+    font-size: 10px;
+    padding: 9px 13px;
+    border-radius: 6px;
+  }
+
+  .connect {
+    gap: 8px;
+  }
+
+  .connect img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .abh {
+    width: 94%;
+    padding: 16px;
+    border-radius: 15px;
+  }
+
+  .about-text h2 {
+    font-size: 21px;
+  }
+
+  .about-text p {
+    font-size: 11px;
+  }
+
+  .skill {
+    width: 94%;
+    padding: 16px;
+  }
+
+  .skills-header h2 {
+    font-size: 17px;
+  }
+
+  .skills-list {
+    gap: 16px;
+  }
+
+  .projects {
+    width: 94%;
+  }
+
+  .project-card h3 {
+    font-size: 14px;
+  }
+
+  .project-card p {
+    font-size: 10px;
+  }
+
+  .timeline {
+    padding: 25px 10px;
+  }
+
+  .journey-item h4 {
+    font-size: 10px;
+  }
+
+  .journey-item h3 {
+    font-size: 12px;
+  }
+
+  .journey-item p {
+    font-size: 10px;
+  }
+
+  .what-i-do {
+    padding: 40px 5%;
+  }
+
+  .what-title h2 {
+    font-size: 23px;
+  }
+
+  .what-card {
+    border-radius: 12px;
+  }
+
+  .contact-section {
+    width: 94%;
+  }
+
+  .contact-right input,
+  .contact-right textarea {
+    font-size: 9px;
+    padding: 9px;
+  }
+
+  .contact-right button {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero,
+  .abh,
+  .skill,
+  .projects,
+  .experience-section,
+  .contact-section,
+  .what-i-do {
+    max-width: 100%;
+  }
+
+  .project-image,
+  .home,
+  .connect img,
+  .skills img {
+    max-width: 100%;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
 }
