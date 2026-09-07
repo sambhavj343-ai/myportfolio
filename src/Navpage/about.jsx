@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import gsap from "gsap";
 
 import main from "../assets/main.png";
-import "./About.css";
+import "./about.css";
 
 function About() {
 
