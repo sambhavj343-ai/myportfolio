@@ -536,7 +536,6 @@ useEffect(() => {
     <div className="connect-banner-icon">
       🚀
     </div>
-
     <div className="connect-banner-content">
       <h2>Always learning something new.</h2>
       <p>
