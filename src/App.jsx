@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 
-import Home from "./Home";
+import Home from "./home";
 import About from "./Navpage/about";
 import Skills from "./Navpage/skills";
 import Projects from "./Navpage/projects";
